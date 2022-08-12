@@ -11,6 +11,7 @@ function App() {
 
   // the nav is showing on every single page 
   // the error page is always at the bottom and astris it
+  // the username can be anything it just has to have the two dots 
   return (
    <Router>
      <nav>
@@ -21,9 +22,10 @@ function App() {
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
-      <Route path="/profile" element={<Profile />} />
+      <Route path="/profile/:username" element={<Profile />} />
       <Route path="•" element={<ErrorPage />}/>
      </Routes>
+     <div>Footer</div>
    </Router>
   );
 }

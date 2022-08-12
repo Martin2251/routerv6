@@ -1,8 +1,11 @@
 import React from 'react'
-
+import {useNavigate,useParams} from "react-router-dom"
 function Profile() {
+    let navigate = useNavigate();
+    let{username} = useParams();
   return (
-    <div>This is a profile</div>
+    <div>This is the profile page for {username}<button onClick={() => {navigate("/about");
+}}>Cjange to about page</button></div>
   )
 }
 
